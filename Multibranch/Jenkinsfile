@@ -8,6 +8,20 @@ pipeline {
                """
            }
        }
+
+     stage('Verify BranchCode') 
+     {
+      when 
+      {
+      branch 'stage'
+      }
+      steps {
+               sh """
+               echo "Only for stage branch"
+               """
+           }
+       }
+
       stage('Deploy Code') {
           steps {
                sh """
