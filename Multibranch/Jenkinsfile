@@ -16,7 +16,7 @@ pipeline {
       branch 'stage'
       }
       steps {
-               sh """
+               
                echo "Only for stage branch"
                
            }
